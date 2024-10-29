@@ -239,6 +239,7 @@
         let stream = null;
 
         function shuffleArray(array) {
+            // TODO: REMOVE ... 
             const newArray = [...array];
             for (let i = newArray.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
@@ -253,7 +254,7 @@
             board.innerHTML = '';
             const shuffledItems = shuffleArray(bingoItems).slice(0, 25);
             
-            shuffledItems.forEach((item, index) => {
+            bingoItems.forEach((item, index) => {
                 const cell = document.createElement('div');
                 cell.className = 'bingo-cell';
                 cell.innerHTML = `
