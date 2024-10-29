@@ -248,6 +248,7 @@
         }
 
         function createBoard() {
+            console.log(bingoItems);
             const board = document.getElementById('bingoBoard');
             board.innerHTML = '';
             const shuffledItems = shuffleArray(bingoItems).slice(0, 25);
