@@ -243,7 +243,6 @@
             console.log(bingoItems);
             const board = document.getElementById('bingoBoard');
             board.innerHTML = '';
-            const shuffledItems = shuffleArray(bingoItems).slice(0, 25);
             
             bingoItems.forEach((item, index) => {
                 const cell = document.createElement('div');
@@ -348,12 +347,6 @@
 
             document.getElementById('bingoMessage').style.display = 
                 hasBingo ? 'block' : 'none';
-        }
-
-        function resetBoard() {
-            selectedCells = new Array(25).fill(false);
-            document.getElementById('bingoMessage').style.display = 'none';
-            createBoard();
         }
 
         // Initialize the board when the page loads
